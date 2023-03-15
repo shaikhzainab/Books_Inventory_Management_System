@@ -1,22 +1,20 @@
 # Books_Inventory_Management_System
 
-Design and create a backend using Django rest framework API’s of a small application of books
-inventory management system which has the following features.
+The offered code is a simple Django REST framework implementation of a library management system.
 
-1. New Books can be added , updated and deleted (CRUD).
-2. New Readers can be added and deleted.
-3. Reader can issue book for Reading and return them.
-4. A Reader can only have 3 books a time
-5. HTTP 400’s in case of exception/error. For example if a student requesting a book that is not
-available in the library or inventory is 0 for a book.
-6. Getting information of Books issued by a reader with proper details.
+It outlines the Book, Student, and Inventory models.
 
-Additional points for:
-Creating an API endpoint which will give us 5 popular books among students along with the
-number of times they were issued.
+The title, author, and ISBN of each book that is checked out from the library are all stored in the Book model.
 
-Must have tables:
-1. Books
-2. Students
-3. Inventory (for Books)
-There can be additional tables Also.
+The Student model maintains information about the library users, including their name, email, and books issued.
+
+The inventory model displays the quantity and type of books currently on hand at the library.
+
+The three models' respective serializers—BookSerializer, StudentSerializer, and InventorySerializer—are defined in the code.
+
+Data can be serialised or deserialized into or out of XML or JSON formats using these serializers.
+
+Additionally, the code defines a number of views that process HTTP requests using Django's generic views.
+These views are BookListCreateView, BookRetrieveUpdateDeleteView, StudentListCreateView, StudentRetrieveUpdateDeleteView, InventoryListCreateView, InventoryRetrieveUpdateDeleteView, IssueBookView, ReturnBookView, and PopularBooksView. 
+
+These views handle CRUD operations for the models and also provide additional functionalities such as issuing and returning books and displaying popular books.
