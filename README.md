@@ -12,7 +12,7 @@ The inventory model displays the quantity and type of books currently on hand at
 
 The three models' respective serializers—BookSerializer, StudentSerializer, and InventorySerializer—are defined in the code.
 
-Data can be serialised or deserialized into or out of XML or JSON formats using these serializers.
+Data can be serialised or deserialized into or out of JSON formats using these serializers.
 
 Additionally, the code defines a number of views that process HTTP requests using Django's generic views.
 These views are BookListCreateView, BookRetrieveUpdateDeleteView, StudentListCreateView, StudentRetrieveUpdateDeleteView, InventoryListCreateView, InventoryRetrieveUpdateDeleteView, IssueBookView, ReturnBookView, and PopularBooksView. 
